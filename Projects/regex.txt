@@ -1,0 +1,7 @@
+p = re.compile(ur'\b((25[0-5]|2[0-4]\d|[0-1]?\d?\d)(\.(25[0-5]|2[0-4]\d|[0-1]?\d?\d)){3})\b') = IP
+
+p = re.compile(ur'\b([0-9a-fA-F]{2}:??){5}([0-9a-fA-F]{2})\b') = MAC
+
+macregx = re.compile(ur'\bhwsrc=([0-9a-fA-F]{2}:??[0-9a-fA-F]{2}:??[0-9a-fA-F]{2}:??[0-9a-fA-F]{2}:??[0-9a-fA-F]{2}:??[0-9a-fA-F]{2})\b') = Refined MAC
+
+ipregx = re.compile(ur'\bpsrc=((25[0-5]|2[0-4]\d|[0-1]?\d?\d)(\.(25[0-5]|2[0-4]\d|[0-1]?\d?\d)){3})\b') = refined IP
