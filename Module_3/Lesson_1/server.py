@@ -1,6 +1,11 @@
 import socket
 
+
+#Creates Socket
 tcpSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+#makes sure port is quickly reusable after crash or exit
+tcpSocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
 
 # Bind to address and Port
@@ -33,3 +38,24 @@ client.close()
 print "Shutting down server ..."
 
 tcpSocket.close()
+
+
+'''
+Tasks
+
+
+Create a simple Echo Server to handle 1 client
+
+Create a Multi-Threader Echo Server
+
+Create a Multi-Process Echo Server
+
+Create a Non-blocking Multiplexed Echo Server using Select()
+
+
+'''
+
+
+import ftplib as FTP
+
+conn.login()
